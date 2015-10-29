@@ -8,7 +8,11 @@
 		</div>
 		<div id="view-description">{{ movieInfo.storyline }}</div>
 		<div id="view-add">
-			<button class="btn btn-default" id="view-add-to-favorites" data-trailer-url="{{ movieInfo.trailer_url }}" data-poster-url="{{ movieInfo.poster_image_url }}" data-title="{{ movieInfo.title }}" data-year="{{ movieInfo.year }}">Add to Favorites</button>
+		{% if movieInfo.isFavorite %}
+			<button class="btn btn-primary disabled">In Favorites</button>
+		{% else %}
+			<button class="btn btn-primary" id="view-add-to-favorites" data-trailer-url="{{ movieInfo.trailer_url }}" data-poster-url="{{ movieInfo.poster_image_url }}" data-title="{{ movieInfo.title }}" data-year="{{ movieInfo.year }}">Add to Favorites</button>
+		{% endif %}
 		</div>
 	</div>
 </div>

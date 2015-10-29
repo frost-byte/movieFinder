@@ -176,6 +176,7 @@
 				success: function(response){
 					$('#view-add-to-favorites').addClass('disabled');
 					$('#view-add-to-favorites').removeAttr('data-toggle');
+					$('#view-add-to-favorities').val("In Favorites");
 					$('#movie-list-container').empty().append(response);
 				},
 				error: function(error){

@@ -9,15 +9,17 @@ class TrailerAddictMovie():
         self.__dict__ = d['trailers']['trailer']
         
 class Movie():
-    def __init__(self, movie_title, movie_storyline=None, movie_poster_url=None, movie_trailer_url=None, movie_imdb_id=None, movie_year=None):
+    def __init__(self, movie_title, movie_storyline=None, movie_poster_url=None, movie_trailer_url=None, movie_imdb_id=None, movie_year=None, isFavorite=False):
         self.title = movie_title
         self.storyline = movie_storyline
         self.poster_image_url = movie_poster_url
         self.trailer_url = movie_trailer_url
-        self.trailer_id = None
         self.imdb_id = movie_imdb_id
-        self.hyphenated_title = None
         self.year = movie_year
+        self.isFavorite = isFavorite
+        
+        self.hyphenated_title = None
+        self.trailer_id = None
         
         # Extract the youtube ID from the url (copied from fresh_tomatoes.py)
         if self.trailer_url != None:

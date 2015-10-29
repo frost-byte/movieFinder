@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, json
 import media
 import omdb
-from entertainment_center import movieList
+from entertainment_center import movieList, isFavorite, getMovie
 
 app = Flask(__name__)
 
@@ -30,18 +30,19 @@ def process_view():
     # Search the Online Movie Database using an IMDB id
     imdbInfo = omdb.imdbid(imdb_id)
     
-    
-    #  Put the information in a Movie object.
-    viewedMovie = media.Movie(imdbInfo.title,
-                              imdbInfo.plot,
-                              imdbInfo.poster,
-                              None,
-                              imdb_id,
-                              imdbInfo.year)
-# break point for debugging                              
-#        import pdb; pdb.set_trace()    
-    # Pull the Trailer Url from TrailerAddict.com
-    viewedMovie.set_trailer_info()
+    #  See if it's already in Favorites
+    if isFavorite(imdbInfo.title):
+        viewedMovie = getMovie(imdbInfo.title)
+    # Movie isn't favored already, so create a new instance
+    else:
+        viewedMovie = media.Movie(imdbInfo.title,
+                                  imdbInfo.plot,
+                                  imdbInfo.poster,
+                                  None,
+                                  imdb_id,
+                                  imdbInfo.year)
+        # Pull the Trailer Url from TrailerAddict.com
+        viewedMovie.set_trailer_info()
     
     # Render the Movie into a view on the Client
     return render_template("movie_view.html",movieInfo=viewedMovie)
@@ -58,7 +59,7 @@ def add_to_favorites():
     poster = movie['poster_url']
     
     # Create and Add the New Movie to the Favorites List
-    newMovie = media.Movie(title,None,poster,trailer)
+    newMovie = media.Movie(title,None,poster,trailer,isFavorite=True)
     movieList.append(newMovie)
 
     # Update the Primary view which contains the tiles of Favorite movies.
