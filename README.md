@@ -10,7 +10,7 @@
 - Under "System variables"
 - Add PYTHONPATH if it doesn't already exist
 - Edit Path to include %PYTHONPATH%;%PYTHONPATH%\Scripts;
-    	
+        
 ### Virtualenv
 If the Path variables have been set, you should be able to use pip from the Windows command line.
 Press the Windows Key and r to bring up the Run Dialog and in the Open text box type: (Press the Enter key after each of the following)
@@ -59,6 +59,12 @@ sudo pip install xmltodict
 sudo pip install flask
 ```
 	  
+## Running the App
+From the Windows command prompt ( or OS X Terminal ) make sure you're in the project directory with virtualenv activated.<br>
+Run the following command: `python entertainment_center.py`<br>
+
+Several messages should appear indicating that the server is running on the **localhost** and port **5000**. `http://127.0.0.1:5000`<br>
+A browser window should then open and the site should appear.
 
 ## Requirements
 + Python 2.7
