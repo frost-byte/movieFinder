@@ -10,29 +10,55 @@
 - Under "System variables"
 - Add PYTHONPATH if it doesn't already exist
 - Edit Path to include %PYTHONPATH%;%PYTHONPATH%\Scripts;
-		
-### virtual_env
+    	
+### Virtualenv
 If the Path variables have been set, you should be able to use pip from the Windows command line.
 Press the Windows Key and r to bring up the Run Dialog and in the Open text box type: (Press the Enter key after each of the following)
 
-```javascript
+```
 cmd
-pip install virtual_env
+pip install virtualenv
 cd C:\Path\to\movieFinder
 virtualenv venv
 venv\scripts\activate
+```
+
+# Installation on Mac OS X
+OS X comes with a version of Python already installed.  These instructions will assume that the default Python install will be used.<br>
+
+1. Toggle Spotlight by pushing the Command key and spacebar at the same time.
+- Type Terminal and hit enter
+- The Terminal should open up to your home directory, change directory to where you unzipped the project or want to install.
+- If you have git installed, then you can clone the project via the command `git clone https://github.com/frost-byte/movieFinder.git`
+- Next, enter the following commands:
+
+### Virtualenv
+```
+sudo easy_install pip
+sudo pip install virtualenv
+cd movieFinder
+virtualenv venv
+source venv/bin/activate
 ```
 
 The command prompt will change from 'c:\path\to\movieFinder>' to '(venv) c:\path\to\movieFinder'
 	  
 ## Python Modules and Dependencies
 
-Make sure virtualenv is activated (see above)
+Make sure virtualenv is activated (see above) 
 ```
 pip install omdb
 pip install xmltodict
 pip install flask
-```	  
+```
+
+For Mac OS X, you might need to preface the above commands with sudo.
+```
+sudo pip install omdb
+sudo pip install xmltodict
+sudo pip install flask
+```
+	  
 
 ## Requirements
 + Python 2.7
@@ -88,6 +114,9 @@ A python module for creating Virtual Environments for Python projects.
 
 [Python-Guide.org Virtualenv Guide](http://docs.python-guide.org/en/latest/dev/virtualenvs/)<br>
 Encapsulates a Python projects third party module dependencies into an environment which can be per project.
+
+[Python Tricks: Accessing Dictionary Items as Object Attributes by Senko Rašić](http://goodcode.io/articles/python-dict-object/)<br>
+Used his method of creating a python object from a dictionary by assigning the dictionary to the object's __dict__ attribute.
 
 ###Markdown
 [Markdown Here](http://markdown-here.com/)<br>
