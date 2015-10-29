@@ -1,0 +1,19 @@
+{% if searchList %}
+<div class="panel panel-primary">
+	<div class="panel-heading">Search Results</div>
+	<table class="search-table">
+		<tr>
+			<th style="width:80%">Title</th>
+			<th style="width:12%">Year</th>
+			<th>Imdb ID</th>
+		</tr>
+		{% for movie in searchList %}
+		<tr class="movie-search-item" data-movie-imdb-id="{{ movie.imdb_id }}" data-movie-poster-url="{{ movie.poster }}" data-movie-title="{{ movie.title }}" data-movie-year="{{ movie.year }}">
+			<td>{{ movie.title }}</td>
+			<td>{{ movie.year }}</td>
+			<td>{{ movie.imdb_id }}</td>
+		</tr>
+		{% endfor %}
+	</table>
+</div>
+{% endif %}

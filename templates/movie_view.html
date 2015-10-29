@@ -1,0 +1,15 @@
+{% if movieInfo  %}
+<div class="panel panel-primary">
+	<div class="panel-heading">{{ movieInfo.title }} ({{ movieInfo.year }})</div>
+	<div class="panel-content">
+		<div>
+			<img src="{{ movieInfo.poster_image_url }}" width="220" height="342">
+			<iframe width="640" height="360" src="{{ movieInfo.trailer_url }}" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" scrolling="no" frameborder="0"></iframe>
+		</div>
+		<div id="view-description">{{ movieInfo.storyline }}</div>
+		<div id="view-add">
+			<button class="btn btn-default" id="view-add-to-favorites" data-trailer-url="{{ movieInfo.trailer_url }}" data-poster-url="{{ movieInfo.poster_image_url }}" data-title="{{ movieInfo.title }}" data-year="{{ movieInfo.year }}">Add to Favorites</button>
+		</div>
+	</div>
+</div>
+{% endif %}
