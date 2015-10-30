@@ -73,11 +73,17 @@ A browser window should then open and the site should appear.
 + xmltodict
 + omdb
 
-## References
-    
-###Movie APIs
-## References
-    
+##References
+###Code Attributions  
+[Python Tricks: Accessing Dictionary Items as Object Attributes by Senko Rašić](http://goodcode.io/articles/python-dict-object/)<br>
+Used his method of creating a python object from a dictionary by assigning the dictionary to the object's __dict__ attribute.
+
+[How to Check if an Enter Key is Pressed with jQuery by mkyong](http://www.mkyong.com/jquery/how-to-check-if-an-enter-key-is-pressed-with-jquery/)<br>
+Checking for the Enter key's keycode in an event using jQuery.
+
+[What is the easiest way to disable/enable buttons and links (jQuery + Bootstrap) answer from oikonomopo](http://stackoverflow.com/a/17935158)<br>
+Technique for disabling a Bootstrap button using jQuery.
+   
 ###Movie APIs
 [Jayaprakash Garaga, Grand Valley State University, Personalized Movie Database System](http://scholarworks.gvsu.edu/cgi/viewcontent.cgi?article=1205&context=cistechlib)<br>
 This was very useful for understanding and learning about some of the APIs available for web sites and services for Movies.
@@ -120,9 +126,6 @@ A python module for creating Virtual Environments for Python projects.
 
 [Python-Guide.org Virtualenv Guide](http://docs.python-guide.org/en/latest/dev/virtualenvs/)<br>
 Encapsulates a Python projects third party module dependencies into an environment which can be per project.
-
-[Python Tricks: Accessing Dictionary Items as Object Attributes by Senko Rašić](http://goodcode.io/articles/python-dict-object/)<br>
-Used his method of creating a python object from a dictionary by assigning the dictionary to the object's __dict__ attribute.
 
 ###Markdown
 [Markdown Here](http://markdown-here.com/)<br>
