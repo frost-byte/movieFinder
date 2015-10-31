@@ -42,7 +42,7 @@ source venv/bin/activate
 ```
 
 The command prompt will change from 'c:\path\to\movieFinder>' to '(venv) c:\path\to\movieFinder'
-	  
+      
 ## Python Modules and Dependencies
 
 Make sure virtualenv is activated (see above) 
@@ -73,7 +73,43 @@ A browser window should then open and the site should appear.
 + xmltodict
 + omdb
 
+## Recommended
++ Sphinx
++ flake8
++ Virtualenv
+
 ##References
+###Code Documentation
+[Documentation](https://frost-byte.github.io/movieFinder/) for the modules was generated using Docstrings and Sphinx.<br>
+
+[Daler's Guide to Publishing Sphinx Generated Docs to github](https://daler.github.io/sphinxdoc-test/includeme.html)<br>
+Simplifies using your Sphinx generated docs on your project's github.io page.
+
+[reStructured Text Primer](http://sphinx-doc.org/rest.html)<br>
+Detailed guide for the .rst markdown format used by Sphinx.
+
+[Python Documentation Guide](http://docs.python-guide.org/en/latest/writing/documentation/)<br>
+General guide covering various tools to document Python code, including Sphinx.
+
+[First Steps with Sphinx](http://sphinx-doc.org/tutorial.html)<br>
+How to get Sphinx setup and running.
+
+[PEP 0257 Docstring Conventions](https://www.python.org/dev/peps/pep-0257/)<br>
+Guidelines for using Docstrings to document your python source code.
+
+[Documenting your Project using Sphinx](https://pythonhosted.org/an_example_pypi_project/sphinx.html)<br>
+More insights about Sphinx.
+
+[A semi-automatic way for Sphinx to Document using Docstrings](http://sphinx-doc.org/ext/autodoc.html)<br>
+This is by far the easiest way to quickly document your modules, classes and methods.
+
+###Code Formatting
+[Pep8 Online](http://pep8online.com/)<br>
+An online python formatting tester.
+
+[Flake8](https://flake8.readthedocs.org/en/2.4.1/)<br>
+A Handy, command line tool for checking the formatting of your python code.
+
 ###Code Attributions  
 [Python Tricks: Accessing Dictionary Items as Object Attributes by Senko Rašić](http://goodcode.io/articles/python-dict-object/)<br>
 Used his method of creating a python object from a dictionary by assigning the dictionary to the object's __dict__ attribute.
